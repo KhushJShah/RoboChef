@@ -7,5 +7,5 @@ names:
 - Star Anise
 - None
 nc: 7
-train: /content/drive/MyDrive/Colab Notebooks/spice_detection_dataset_yolo1/images/train
-val: /content/drive/MyDrive/Colab Notebooks/spice_detection_dataset_yolo1/images/val
+train: spice_detection_dataset_yolo1/spice_detection_dataset_yolo1/images/train
+val: spice_detection_dataset_yolo1/spice_detection_dataset_yolo1/images/val
