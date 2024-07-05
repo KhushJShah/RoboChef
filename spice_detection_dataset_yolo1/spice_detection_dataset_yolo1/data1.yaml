@@ -1,11 +1,5 @@
-names:
-- Cinnamon
-- Clove
-- Bay Leaf
-- Black Pepper
-- Dry Ginger
-- Star Anise
-- None
+names: ['Cinnamon', 'Clove', 'Bay Leaf', 'Black Pepper', 'Dry Ginger', 'Star Anise', 'None']
 nc: 7
-train: spice_detection_dataset_yolo1/spice_detection_dataset_yolo1/images/train
-val: spice_detection_dataset_yolo1/spice_detection_dataset_yolo1/images/val
+train: E:/RoboChef/spice_detection_dataset_yolo1/spice_detection_dataset_yolo1/images/train
+val: E:/RoboChef/spice_detection_dataset_yolo1/spice_detection_dataset_yolo1/images/val
+
