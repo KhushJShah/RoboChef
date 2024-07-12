@@ -42,8 +42,8 @@ def predict_and_visualize(model, image_path):
 
 if __name__ == '__main__':
     # Define the paths
-    weights_path = 'C:/Users/Computer vision/Desktop/RoboChef/runs/detect/train11/weights/best.pt'
-    test_image_path = 'E:/RoboChef/clove_cinnamon1.jpg'  
+    weights_path = 'C:/Users/Computer vision/Desktop/RoboChef/runs/detect/train14/weights/best.pt'
+    test_image_path = 'E:/RoboChef/images.jpeg'  
 
     # Load the model
     model = load_model(weights_path)

@@ -80,10 +80,19 @@ def augment_image(img, bbox):
 # Function to convert bounding box to YOLO format
 def convert_to_yolo_format(bbox, img_w, img_h):
     x_min, y_min, x_max, y_max = bbox
+    # Ensure the coordinates are within valid range
+    x_min, y_min = max(0, x_min), max(0, y_min)
+    x_max, y_max = min(img_w, x_max), min(img_h, y_max)
+
     x_center = (x_min + x_max) / 2.0 / img_w
     y_center = (y_min + y_max) / 2.0 / img_h
     bbox_width = (x_max - x_min) / img_w
     bbox_height = (y_max - y_min) / img_h
+
+    # Ensure the coordinates are within the range [0, 1]
+    x_center, y_center = min(1, max(0, x_center)), min(1, max(0, y_center))
+    bbox_width, bbox_height = min(1, max(0, bbox_width)), min(1, max(0, bbox_height))
+
     return x_center, y_center, bbox_width, bbox_height
 
 # Process each row in the DataFrame
@@ -137,6 +146,9 @@ for index, row in annotations_df.iterrows():
                 with open(label_save_path, 'w') as f:
                     f.write(yolo_annotation)
 
+            # Overwrite original label with new annotation
+            label_save_path = os.path.join(dataset_dir, folder, f"{Path(image_name).stem}.txt")
+            with open(label_save_path, 'w') as f:
+                f.write(yolo_annotation)
+
             break
-
-
