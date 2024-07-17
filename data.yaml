@@ -1,0 +1,23 @@
+# YAML file for YOLO model training
+
+train: E:/spices.v2i.yolov8/train
+val: E:/spices.v2i.yolov8/valid
+
+# Number of classes
+nc: 13
+
+# Class names
+names:
+  0: Bay Leaf
+  1: Black Pepper
+  2: Cinnamon
+  3: Cloves
+  4: Cumin
+  5: Dry Ginger
+  6: Hing
+  7: Mustard
+  8: Red Chilli
+  9: Salt
+  10: Star Anise
+  11: Sugar
+  12: Turmeric

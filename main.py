@@ -3,8 +3,8 @@ import torch
 
 def main():
     # Load the pre-trained model
-    model = YOLO('c:/Users/Computer vision/Desktop/RoboChef/runs\detect/train13/weights/best.pt')
-    yaml_path = 'E:/RoboChef/spice_detection_dataset_yolo1/spice_detection_dataset_yolo1/data1.yaml'
+    model = YOLO('yolov8n.pt')
+    yaml_path = 'E:/RoboChef/data.yaml'
 
     # Determine the device to use
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
